@@ -10,8 +10,6 @@ Dependencies:
 
 ## Usage
 
----
-
 Below is the example of using this package.
 
     from flask import Flask
