@@ -8,17 +8,24 @@ Dependencies:
 
   pip install flask-bcrypt
 
-Example:
+## Usage
+
+---
+
+Below is the example of using this package.
+
+    from flask import Flask
+    from pcrypt import Pcrypt
 
     app = Flask(__name__)
     pepper = "thisismypeppersecret"
     pcrypt = Pcrypt(app, pepper)
 
-To hash the password:
+    # To hash the password:
 
     password = "abc1111"
     hashed_password = pcrypt.hash_password(password)
 
-To compare and check password hash:
+    # To compare and check password hash:
 
     result = pcrypt.compare_password(hashed_password, password)
